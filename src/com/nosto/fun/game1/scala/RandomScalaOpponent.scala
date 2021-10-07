@@ -15,14 +15,20 @@ class RandomScalaOpponent(name: String) extends ScalaPlayer with Cloneable {
     myPiece = piece
   }
 
+
+
   override def move(board: Array[Array[Piece]], lastPosition: ArenaPosition): ArenaPosition = {
     val emptySlots = board.map(_.zipWithIndex.collect {
       case (null, index) => index
     }).zipWithIndex.flatMap {
       case (rows, col) => rows.map((_, col))
     }
+    println(lastPosition.getRow, lastPosition.getColumn)
+    println(lastPosition.toString)
     emptySlots(Random.nextInt(emptySlots.size)) match {
-      case (row, col) => new ArenaPosition(col, row)
+      case (row, col) =>
+        new ArenaPosition(col, row)
+
     }
   }
 }

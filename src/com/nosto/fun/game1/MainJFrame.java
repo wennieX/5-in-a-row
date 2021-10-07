@@ -30,7 +30,8 @@ public class MainJFrame extends javax.swing.JFrame {
         //  Add your algorithms here!
         //---------------------------------------------
         algorithms.addElement(new RandomOpponent("LotteryJohnny"));     
-        algorithms.addElement(new RandomOpponent("LuckyJack"));
+//        algorithms.addElement(new RandomOpponent("LuckyJack"));
+        algorithms.addElement(new com.nosto.fun.game1.scala.SimplestAI("SimplestAI"));
 
         // If you are implementing puzzle with Scala you can uncomment line below to use example Scala opponent.
         // It is commented out by default because old Ant build used for Java only implementations does not support
